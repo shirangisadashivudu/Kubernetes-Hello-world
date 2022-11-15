@@ -1,18 +1,18 @@
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: Kubernetes-Hello-world
-  labels:
-    jobgroup: jobexample
-spec:
-  template:
-    metadata:
-      name: kubejob
-      labels:
-        jobgroup: jobexample
-    spec:
-      containers:
-      - name: c
-        image: shirangisadashivudu/Kubernetes-Hello-world
-        command: ["100"]
-      restartPolicy: Never
+apiVersion: batch/v1 
+kind: Job 
+metadata:   
+  name: Kubernetes-Hello-world   
+  labels:     
+    jobgroup: jobexample 
+spec:   
+  template:     
+    metadata:       
+      name: kubejob       
+      labels:         
+        jobgroup: jobexample     
+    spec:       
+      containers:       
+      - name: c         
+        image: devopscube/kubernetes-job-demo:latest         
+        args: ["100"]       
+      restartPolicy: OnFailure
