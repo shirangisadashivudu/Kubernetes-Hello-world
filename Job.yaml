@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: kubernetes-job-example
+  name: Kubernetes-Hello-world
   labels:
     jobgroup: jobexample
 spec:
@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
       - name: c
-        image: devopscube/kubernetes-job-demo:latest
+        image: shirangisadashivudu/Kubernetes-Hello-world :latest
         command: ["100"]
       restartPolicy: Never
